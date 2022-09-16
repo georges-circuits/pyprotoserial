@@ -1,0 +1,6 @@
+[submodule "submodules/pybind11"]
+	path = submodules/pybind11
+	url = git@github.com:pybind/pybind11.git
+[submodule "submodules/libprotoserial"]
+	path = submodules/libprotoserial
+	url = git@github.com:georges-circuits/libprotoserial.git
