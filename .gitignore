@@ -1,0 +1,13 @@
+*.out*
+*.vg*
+*.so
+
+.vscode
+
+__pycache__
+
+#OTHER
+
+# Dolphin
+.directory
+
