@@ -21,7 +21,7 @@
 
 
 //#define SP_FRAGMENTATION_WARNING
-//#define SP_BUFFERED_WARNING
+//#define SP_BUFFERED_DEBUG
 
 #include <pybind11/pybind11.h>
 #include <pybind11/functional.h>

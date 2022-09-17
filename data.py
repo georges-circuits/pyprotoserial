@@ -50,7 +50,7 @@ class bytesbuff:
 
 class fragment:
     def __init__(self, destination=0, data=bytesbuff()) -> None:
-        self._obj = _fragment(destination, data)
+        self._obj = _fragment(destination, data._obj)
 
     def get_data(self) -> bytesbuff:
         return self._obj.data()
