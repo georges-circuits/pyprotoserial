@@ -49,7 +49,7 @@ class uart:
         uart_interface_instance_count += 1
 
     def on_fragment_receive(self, callback: FunctionType) -> None:
-        self._obj.on_fragment_receive(lambda f: callback(f))
+        self._obj.on_fragment_receive(lambda f: callback(fragment.from_unwrapped(f)))
 
     def transmit_fragment(self, f: fragment) -> None:
         self._obj.transmit_fragment(f._obj)

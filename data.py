@@ -32,6 +32,12 @@ class bytesbuff:
         else:
             assert False, self.init_error
 
+    @classmethod
+    def from_unwrapped(cls, obj):
+        ret = cls()
+        ret._obj = obj
+        return ret
+    
     def len(self) -> int:
         return self._obj.size()
 
@@ -52,8 +58,14 @@ class fragment:
     def __init__(self, destination=0, data=bytesbuff()) -> None:
         self._obj = _fragment(destination, data._obj)
 
+    @classmethod
+    def from_unwrapped(cls, obj):
+        ret = cls()
+        ret._obj = obj
+        return ret
+
     def get_data(self) -> bytesbuff:
-        return self._obj.data()
+        return bytesbuff.from_unwrapped(self._obj.data())
 
     def get_source(self) -> int:
         return self._obj.source()
