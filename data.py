@@ -33,7 +33,7 @@ class bytesbuff:
             assert False, self.init_error
 
     @classmethod
-    def from_unwrapped(cls, obj):
+    def from_unwrapped(cls, obj: _bytesbuff):
         ret = cls()
         ret._obj = obj
         return ret
@@ -47,7 +47,7 @@ class bytesbuff:
     def as_list(self) -> list:
         return self._obj.as_list()
 
-    def __getitem__(self, key) -> int:
+    def __getitem__(self, key: int) -> int:
         return self._obj.at(key)
 
     def __repr__(self) -> str:
@@ -59,7 +59,7 @@ class fragment:
         self._obj = _fragment(destination, data._obj)
 
     @classmethod
-    def from_unwrapped(cls, obj):
+    def from_unwrapped(cls, obj: _fragment):
         ret = cls()
         ret._obj = obj
         return ret
