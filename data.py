@@ -76,6 +76,9 @@ class fragment:
     def set_destination(self, addr: int) -> None:
         return self._obj.set_destination(addr)
 
+    def __repr__(self) -> str:
+        return str(self._obj)
+
 
 
 if __name__ == "__main__":

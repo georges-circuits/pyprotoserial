@@ -1,6 +1,5 @@
 
 from time import sleep
-from tkinter import E
 import interfaces, data
 
 interface = interfaces.uart('/dev/ttyACM0', 2, 255)
